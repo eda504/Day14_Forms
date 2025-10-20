@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Truths and a Lie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>eda's truth and lie game</h1>
+    <hr>
+    <h2>Introductions</h2>
+    <form action="" id="name-form">
+        <label for="fname">First Name:</label><br>
+        <input type="text" name="fname" id="fname" required><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="lname" id="lname" required><br>
+        <label for="age">Age:</label><br>
+        <input type="date" name="age" id="age" required><br>
+        <label for="secret">Secret Code:</label><br>
+        <input type="password" name="secret" id="secret"><br>
+    </form>
+    <br>
+    <input type="button" value="SUBMIT" onclick="greet();">
+    <p id="secret-feedback" class="feedback"></p>
+    <p id="greet">welcome!</p>
+    <audio id="secret-song" src="js/cute_circus.mp3"></audio>
+
+    <h2>warm up trivia question</h2>
+    <p>what is the only food that cannot go bad?</p>
+    <p id="trivia1-answer"></p>
+    <form id="trivia-form">
+        <input type="radio" name="trivia1" id="chocolate" value="chocolate">
+        <label for="chocolate">dark chocolate</label><br>
+        <input type="radio" name="trivia1" id="tuna" value="tuna">
+        <label for="tuna">canned tuna</label><br>
+        <input type="radio" name="trivia1" id="honey" value="honey">
+        <label for="honey">honey</label><br>
+    </form>
+    <div id="timer">Time left: <span id="timer-display">30</span>s</div>
+    <input type="button" value="SUBMIT" id="trivia-submit" onclick="trivia1();">
+    <div id="trivia-feedback" class="feedback"></div>
+
+    <h2>two truths and a lie</h2>
+    <p>which statement is the lie?</p>
+    <form id="radio-game">
+        <div class="statement">
+            <input type="radio" name="radio-game" id="radio1" value="radio1">
+            <label for="radio1">I've been on international TV and spoke to a celebrity.</label>
+        </div>
+        <div class="statement">
+            <input type="radio" name="radio-game" id="radio2" value="radio2">
+            <label for="radio2">I can speak three languages fluently.</label>
+        </div>
+        <div class="statement">
+            <input type="radio" name="radio-game" id="radio3" value="radio3">
+            <label for="radio3">I have never gone biking.</label>
+        </div>
+    </form>
+    <div id="radio-timer">Time left: <span id="radio-timer-display">30</span>s</div>
+    <input type="button" value="SUBMIT" id="radio-submit" onclick="radioGame();">
+    <div id="radio-feedback" class="feedback"></div>
+
+    <h2>two truths and a lie (checkbox challenge)</h2>
+    <p>select the TWO truths (the one you don't select is the lie):</p>
+    <form id="checkbox-game">
+        <div class="statement">
+            <input type="checkbox" id="check1" value="check1">
+            <label for="check1">I have a pet turtle named Sheldon.</label>
+        </div>
+        <div class="statement">
+            <input type="checkbox" id="check2" value="check2">
+            <label for="check2">I can play Mario Kart with one hand.</label>
+        </div>
+        <div class="statement">
+            <input type="checkbox" id="check3" value="check3">
+            <label for="check3">I used to be a gymnast.</label>
+        </div>
+    </form>
+    <div id="checkbox-timer">Time left: <span id="checkbox-timer-display">45</span>s</div>
+    <input type="button" value="SUBMIT" id="checkbox-submit" onclick="checkboxGame();">
+    <div id="checkbox-feedback" class="feedback"></div>
+
+    <script src="js/truth.js"></script>
+</body>
+</html>
